@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuscaPet - MVP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Animais Encontrados</h1>
+    <p class="info-mvp">Protótipo: os novos cadastros ficam apenas neste navegador.</p>
+  </header>
+
+  <main>
+    <section id="form-section">
+      <h2>Cadastrar Animal</h2>
+      <form id="animal-form" novalidate>
+        <div class="form-group">
+          <label for="foto">Foto (opcional)</label>
+          <input type="url" id="foto" name="foto" placeholder="https://exemplo.com/foto.jpg">
+          <small>Informe o endereço da imagem. Sem upload.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="temColeira">Tem coleira?</label>
+          <select id="temColeira" name="temColeira">
+            <option value="false">Não</option>
+            <option value="true">Sim</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="nomeNaColeira">Nome na coleira (opcional)</label>
+          <input type="text" id="nomeNaColeira" name="nomeNaColeira" placeholder="Ex.: Max">
+        </div>
+
+        <div class="form-group">
+          <label for="castrado">Castrado</label>
+          <select id="castrado" name="castrado">
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+            <option value="null">Não sei</option>
+          </select>
+        </div>
+
+        <div class="form-group required">
+          <label for="sexo">Sexo *</label>
+          <select id="sexo" name="sexo" required>
+            <option value="">Selecione</option>
+            <option value="M">Macho (M)</option>
+            <option value="F">Fêmea (F)</option>
+          </select>
+        </div>
+
+        <div class="form-group required">
+          <label for="porte">Porte *</label>
+          <select id="porte" name="porte" required>
+            <option value="">Selecione</option>
+            <option value="PEQUENO">PEQUENO</option>
+            <option value="PEQUENO-MÉDIO">PEQUENO-MÉDIO</option>
+            <option value="MÉDIO">MÉDIO</option>
+            <option value="MÉDIO-GRANDE">MÉDIO-GRANDE</option>
+            <option value="GRANDE">GRANDE</option>
+          </select>
+        </div>
+
+        <div class="form-group required">
+          <label for="descricaoAparencia">Descrição da aparência *</label>
+          <textarea id="descricaoAparencia" name="descricaoAparencia" rows="4"
+            placeholder="Descreva cor, pelagem, marcas, olhos, orelhas, etc. com detalhes"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="estaComCachorro">Está com cachorro?</label>
+          <select id="estaComCachorro" name="estaComCachorro">
+            <option value="false">Não</option>
+            <option value="true">Sim</option>
+          </select>
+        </div>
+
+        <div class="form-group required">
+          <label for="ultimoLugarEncontrado">Último lugar encontrado *</label>
+          <textarea id="ultimoLugarEncontrado" name="ultimoLugarEncontrado" rows="3"
+            placeholder="Ex.: Rua, bairro, ponto de referência"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">Cadastrar Animal</button>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="list-section">
+      <h2>Lista de Animais</h2>
+      <div id="lista-animais" class="lista-animais"></div>
+      <p id="lista-vazia" class="lista-vazia" hidden>Nenhum animal cadastrado.</p>
+      <p id="lista-info" class="lista-info"></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>MVP demonstrável - HTML, CSS e JavaScript puro</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

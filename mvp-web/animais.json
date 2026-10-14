@@ -1,0 +1,28 @@
+{
+  "animais": [
+    {
+      "id": 1,
+      "foto": "fotos/animal-1.jpg",
+      "temColeira": true,
+      "nomeNaColeira": "Max",
+      "castrado": true,
+      "sexo": "M",
+      "porte": "PEQUENO",
+      "descricaoAparencia": "Cachorro de pelagem curta, cor marrom com manchas brancas no peito e nas patas. Orelhas caídas e olhos castanhos.",
+      "estaComCachorro": false,
+      "ultimoLugarEncontrado": "Rua das Flores, Bairro Centro, perto da praça"
+    },
+    {
+      "id": 2,
+      "foto": null,
+      "temColeira": false,
+      "nomeNaColeira": null,
+      "castrado": null,
+      "sexo": "F",
+      "porte": "MÉDIO",
+      "descricaoAparencia": "Cadela de pelagem longa, cor preta com manchas caramelo nas orelhas e rabo. Corpo esguio e bastante ativa.",
+      "estaComCachorro": true,
+      "ultimoLugarEncontrado": "Avenida Principal, Bairro Jardim, próximo ao supermercado"
+    }
+  ]
+}
